@@ -59,8 +59,8 @@ def apply_offsets(face_coordinates, offsets):
     return (x - x_off, x + width + x_off, y - y_off, y + height + y_off)
 
 # THRESHOLD cho gender (anti-bias)
-FEMALE_THRESHOLD = 0.3
-MALE_THRESHOLD = 0.6
+FEMALE_THRESHOLD = 0.2
+MALE_THRESHOLD = 0.7
 
 # History buffers cho smooth (frame_window)
 gender_history = []  # Probs Female qua frames

@@ -1,16 +1,3 @@
-"""
-File: train_emotion_classifier.py
-Author: Adapted from Octavio Arriaga's original code
-Description: Train emotion classification model using TensorFlow 2.x / Keras for Python 3.10+
-Updated to use ImageDataGenerator.flow_from_directory for loading from folder structure
-instead of CSV, and modern Keras APIs (no fit_generator, tf.keras integration).
-Assumes folder structure: datasets/emotion/train/<class_folders>/ (e.g., angry/, disgust/, etc.)
-and datasets/emotion/test/<class_folders>/ for final evaluation.
-Uses validation_split=0.2 on the train folder for validation data during training.
-After training, evaluates on the separate test folder.
-Preprocessing is integrated into the data generator.
-"""
-
 import os
 import tensorflow as tf
 from tensorflow.keras import layers
@@ -32,7 +19,7 @@ verbose = 1
 num_classes = 7  # Assuming fer2013-style: angry, disgust, fear, happy, sad, surprise, neutral
 # If your classes differ, set num_classes = len(os.listdir('datasets/emotion/train'))
 patience = 50
-base_path = '../trained_models/emotion_models/'
+base_path = 'model/emotion_model/'
 train_data_dir = 'datasets/emotion/train'  # Path to train folder with subfolders per class
 test_data_dir = 'datasets/emotion/test'    # Path to test folder with subfolders per class
 

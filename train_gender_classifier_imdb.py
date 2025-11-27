@@ -1,17 +1,3 @@
-# train_gender_classifier_imdb_singlefile.py
-"""
-Single-file trainer for IMDB_crop gender dataset (Python 3.10 + TF2).
-- No external utils imports.
-- Reads imdb .mat, filters samples (face_score > 3, single face, gender known).
-- Full augmentation preserved (saturation/brightness/contrast/lighting noise/flip/rotation/random crop).
-- Model: mini_XCEPTION (tf.keras).
-- Uses generator -> model.fit (no fit_generator).
-Requirements:
-    pip install tensorflow opencv-python scipy numpy
-Run:
-    python train_gender_classifier_imdb_singlefile.py
-"""
-
 import os
 import time
 import math
