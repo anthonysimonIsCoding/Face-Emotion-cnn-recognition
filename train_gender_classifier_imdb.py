@@ -47,7 +47,7 @@ input_shape = (64, 64, 1)     # (h, w, c)
 grayscale = True
 images_path = 'datasets/imdb_crop/'  # where images live (prefix to paths in .mat)
 mat_path = 'datasets/imdb_crop/imdb.mat'       # path to imdb .mat file
-base_path = 'models/gender_model/'
+base_path = 'model/gender_model/'
 os.makedirs(base_path, exist_ok=True)
 
 # -----------------------
