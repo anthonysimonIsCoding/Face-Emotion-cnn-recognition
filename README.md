@@ -92,5 +92,39 @@ dependencies:
 | Huấn luyện lại mô hình cảm xúc (FER2013) | `python train_emotion_classifier.py` |
 | Huấn luyện lại mô hình giới tính (IMDB-WIKI) | `python train_gender_classifier_imdb.py` |
 
+## Tập dữ liệu (Datasets)
 
-# Kết quả huấn luyện
+### 1. FER2013 – Facial Expression Recognition 2013  
+**Nguồn**: Kaggle – Challenges in Representation Learning  
+**Link tải**: https://www.kaggle.com/datasets/msambare/fer2013  
+
+| Thông tin                  | Chi tiết                                      |
+|----------------------------|-----------------------------------------------|
+| Tổng số ảnh                | 35.887 ảnh (grayscale, 48×48 pixel)           |
+| Số lớp                     | 7 (angry, disgust, fear, happy, sad, surprise, neutral) |
+| Phân chia gốc              | 28.709 train / 3.589 validation / 3.589 test  |
+| Đặc điểm                   | Ảnh đã được căn chỉnh và crop khuôn mặt       |
+| Độ khó                     | Có nhiều ảnh nhiễu, ánh sáng kém, góc nghiêng |
+| Độ chính xác SOTA (2025)   | 73–75 % (private test)                        |
+
+> **Lưu ý**: Trong dự án này, tập validation được dùng làm tập test để đánh giá cuối cùng.
+
+### 2. IMDB-WIKI (crop face only) – Nhận diện giới tính & tuổi  
+**Nguồn**: Computer Vision Laboratory, ETH Zurich  
+**Link tải**: https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/  
+
+| Thông tin                  | Chi tiết                                      |
+|----------------------------|-----------------------------------------------|
+| IMDB                       | 460.723 ảnh khuôn mặt (đã crop) từ 20.284 ngôi sao |
+| WIKI                       | 62.328 ảnh khuôn mặt từ Wikipedia             |
+| Tổng (sau lọc)             | ~500.000 ảnh chất lượng cao                   |
+| Nhãn                      | Giới tính (male/female), tuổi thực, face_score |
+| Độ phân giải               | Đa dạng (thường ≥ 64×64)                      |
+| Độ chính xác gender SOTA   | 98.0–98.5 % trên tập test riêng               |
+
+> Trong dự án, chỉ sử dụng **IMDB crop** và áp dụng bộ lọc:  
+> `face_score > 3.0` và `second_face_score is NaN` → loại bỏ ảnh nhiễu và ảnh có nhiều khuôn mặt.
+
+
+
+
