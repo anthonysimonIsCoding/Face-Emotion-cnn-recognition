@@ -1,0 +1,16 @@
+# File environment.yml
+name: fer-imdb-train
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - opencv
+  - numpy
+  - matplotlib
+  - scipy
+  - scikit-learn
+  - pillow
+  - pip:
+    - tensorflow==2.12.0
+    - tf-keras-vis==0.8.7
