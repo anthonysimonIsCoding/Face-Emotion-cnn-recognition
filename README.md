@@ -3,7 +3,7 @@
 
 **Kiến trúc mini-Xception nhẹ • FER2013 & IMDB-WIKI • TensorFlow 2.12 • OpenCV**
 
-## Tóm tắt (Abstract)
+## 1. Tóm tắt (Abstract)
 
 Dự án triển khai một hệ thống nhận diện khuôn mặt thời gian thực có khả năng đồng thời dự đoán **giới tính** (nam/nữ) và **bảy loại cảm xúc cơ bản** (giận dữ, chán ghét, sợ hãi, vui vẻ, buồn bã, ngạc nhiên, trung tính) dựa trên kiến trúc **mini-Xception** – một biến thể nhẹ của Xception (Arriaga et al., 2017).  
 
@@ -22,7 +22,7 @@ Hệ thống tích hợp kỹ thuật **Grad-CAM** (thông qua thư viện `tf-k
 | Cơ chế flip + average giảm bias giới tính           | Hoàn thiện |
 | Hướng dẫn huấn luyện lại trên FER2013 và IMDB-WIKI  | Hoàn thiện |
 
-## Cấu trúc thư mục
+## 2. Cấu trúc thư mục
 <pre>
 Face-Emotion-cnn-recognition/
 ├── datasets/
@@ -48,7 +48,7 @@ Face-Emotion-cnn-recognition/
 └── video_gradcam_demo.py                                 ← 🎥 Demo chính: Webcam thời gian thực + Hiển thị Grad-CAM (trực quan nhất)
 </pre>
 
-## Hướng dẫn cài đặt
+## 3. Hướng dẫn cài đặt
 
 ```bash
 git clone https://github.com/<username>/Face-Emotion-cnn-recognition.git
@@ -82,7 +82,7 @@ dependencies:
     - pandas
 ```
 
-## Các lệnh khởi chạy
+## 4. Các lệnh khởi chạy
 
 | Mục đích | Lệnh thực thi |
 | :--- | :--- |
@@ -92,9 +92,9 @@ dependencies:
 | Huấn luyện lại mô hình cảm xúc (FER2013) | `python train_emotion_classifier.py` |
 | Huấn luyện lại mô hình giới tính (IMDB-WIKI) | `python train_gender_classifier_imdb.py` |
 
-## Tập dữ liệu (Datasets)
+## 5. Tập dữ liệu (Datasets)
 
-### 1. FER2013 – Facial Expression Recognition 2013  
+### 5.1. FER2013 – Facial Expression Recognition 2013  
 **Nguồn**: Kaggle – Challenges in Representation Learning  
 **Link tải**: https://www.kaggle.com/datasets/msambare/fer2013  
 
@@ -109,7 +109,7 @@ dependencies:
 
 > **Lưu ý**: Trong dự án này, tập validation được dùng làm tập test để đánh giá cuối cùng.
 
-### 2. IMDB-WIKI (crop face only) – Nhận diện giới tính & tuổi  
+### 5.2. IMDB-WIKI (crop face only) – Nhận diện giới tính & tuổi  
 **Nguồn**: Computer Vision Laboratory, ETH Zurich  
 **Link tải**: https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/  
 
