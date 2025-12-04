@@ -124,6 +124,8 @@ dependencies:
 
 > Trong dự án, chỉ sử dụng **IMDB crop** và áp dụng bộ lọc:  
 > `face_score > 3.0` và `second_face_score is NaN` → loại bỏ ảnh nhiễu và ảnh có nhiều khuôn mặt.
+> <img width="321" height="32" alt="image" src="https://github.com/user-attachments/assets/62113d9c-f4a7-4c91-9f4f-eddd519d916a" />
+
 
 
 
